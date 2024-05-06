@@ -1,8 +1,4 @@
-"use client";
-
-import { usePathname } from "next/navigation";
 import { Icons } from "./Icons";
-import Link from "next/link";
 
 const Footer = () => {
   return (
