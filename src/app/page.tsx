@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="rounded-md text-center flex flex-col justify-center items-center gap-12  sm:mt-24">
+    <div className="rounded-md text-center flex flex-col justify-center items-center gap-14  sm:mt-24">
       <div className="flex flex-col justify-center items-center gap-6">
         <h1 className="text-2xl tracking-tight sm:text-3xl font-semibold">
           <span className="text-teal-500 font-bold">Ethereal</span> offers you a
@@ -17,6 +17,7 @@ export default function Home() {
           <Icons.stickerIcecream className="w-20 h-20" />
         </div>
       </div>
+
       <div className="text-lg text-muted-foreground">
         Welcome to our sticker wonderland, where creativity knows no bounds!
         Dive into our kaleidoscope of designs, from whimsical characters to
