@@ -11,7 +11,7 @@ import { Sticker } from "@/types/stickerType";
 import Image from "next/image";
 
 interface StickerCardProps {
-  sticker: Sticker; // Define the sticker prop with the Sticker type
+  sticker: Sticker;
 }
 const StickerCard: FC<StickerCardProps> = ({ sticker }) => {
   return (

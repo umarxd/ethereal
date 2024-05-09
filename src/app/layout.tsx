@@ -20,6 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn("bg-white text-slate-900", inter.className)}>
+      <link rel="icon" href="favicon.ico" sizes="any" />
+
       <body className="min-h-screen bg-slate-50 relative pb-24">
         <Navbar />
         <div className="container max-w-7xl mx-auto h-full pt-24">

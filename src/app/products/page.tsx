@@ -1,7 +1,7 @@
 "use client";
 
 import StickerCard from "@/components/StickerCard";
-import stickerData from "../../../util/PlaceholderStickersData";
+import stickerData from "../../util/PlaceholderStickersData";
 
 const Products = ({}) => {
   return (
