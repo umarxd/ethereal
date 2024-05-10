@@ -7,7 +7,7 @@ const Products = ({}) => {
   return (
     <div className="container grid md:grid-cols-4 gap-y-4 gap-x-4">
       {stickerData.map((sticker, index) => (
-        <StickerCard key={index} sticker={sticker} />
+        <StickerCard sticker={sticker} key={index} />
       ))}
     </div>
   );
