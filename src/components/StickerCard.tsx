@@ -21,8 +21,7 @@ const StickerCard: FC<StickerCardProps> = ({ sticker }) => {
     if (items.some((item) => item.sticker.id === sticker.id)) {
       toast({
         title: "There was a problem.",
-        description:
-          "Unfortunately you can not order the same type of sticker multiple times in one order :(",
+        description: "This sticker has already added to your cart.",
         variant: "destructive",
       });
     } else {
@@ -50,7 +49,7 @@ const StickerCard: FC<StickerCardProps> = ({ sticker }) => {
       <Button
         onClick={() => addToCart(sticker)}
         className={buttonVariants({
-          variant: "link",
+          variant: "outline",
           className: "cursor-pointer",
         })}
       >
