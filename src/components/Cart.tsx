@@ -42,7 +42,7 @@ const Cart = () => {
             <div className="flex w-full flex-col pr-6">
               <ScrollArea className="w-full h-[300px] sm:h-[500px] px-6 py-2 rounded-md border border-gray-400">
                 {items.map((item, index) => (
-                  <CartItem item={item.sticker} index={index} key={index} />
+                  <CartItem item={item.sticker} key={index} />
                 ))}
               </ScrollArea>
             </div>
@@ -57,7 +57,7 @@ const Cart = () => {
               <SheetFooter>
                 <SheetTrigger asChild>
                   <Link
-                    href="/cart"
+                    href="/checkout"
                     className={buttonVariants({ className: "w-full" })}
                   >
                     Continue to Checkout

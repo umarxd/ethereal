@@ -9,10 +9,9 @@ import { useCart } from "@/hooks/use-cart";
 
 interface CartItemProps {
   item: Sticker;
-  index: number;
 }
 
-const CartItem: FC<CartItemProps> = ({ item, index }) => {
+const CartItem: FC<CartItemProps> = ({ item }) => {
   const { removeItem } = useCart();
 
   return (
