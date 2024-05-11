@@ -20,11 +20,14 @@ const StickerCard: FC<StickerCardProps> = ({ sticker }) => {
   const addToCart = (sticker: Sticker) => {
     if (items.some((item) => item.sticker.id === sticker.id)) {
       toast({
-        title: "There was a problem.",
         description: "This sticker has already added to your cart.",
         variant: "destructive",
       });
     } else {
+      toast({
+        title: "Sticker added to your cart.",
+        variant: "default",
+      });
       addItem(sticker);
     }
   };
