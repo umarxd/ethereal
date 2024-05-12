@@ -17,6 +17,8 @@ interface StickerCardProps {
   sticker: Sticker;
 }
 const StickerCard: FC<StickerCardProps> = ({ sticker }) => {
+  const { items, addItem } = useCart();
+
   const addToCart = (sticker: Sticker) => {
     if (items.some((item) => item.sticker.id === sticker.id)) {
       toast({
@@ -32,7 +34,6 @@ const StickerCard: FC<StickerCardProps> = ({ sticker }) => {
     }
   };
 
-  const { items, addItem } = useCart();
   return (
     <Card className="text-center">
       <CardHeader>

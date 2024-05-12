@@ -11,15 +11,14 @@ import {
 } from "./ui/sheet";
 import { Separator } from "./ui/separator";
 import Link from "next/link";
-import { buttonVariants } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import Image from "next/image";
-import { useState } from "react";
 import CartItem from "./CartItem";
 import { useCart } from "@/hooks/use-cart";
 import { ScrollArea } from "./ui/scroll-area";
 
 const Cart = () => {
-  const { items } = useCart();
+  const { items, clearCart } = useCart();
 
   const cartTotal = items
     .reduce((total, { sticker }) => total + sticker.price, 0)
@@ -46,7 +45,17 @@ const Cart = () => {
                 ))}
               </ScrollArea>
             </div>
-            <div className="space-y-4 pr-6">
+            <div className="flex flex-col space-y-4 pr-6">
+              <Button
+                onClick={() => clearCart()}
+                className={buttonVariants({
+                  variant: "link",
+                  className: "w-max ml-auto",
+                  size: "xs",
+                })}
+              >
+                Clear Cart
+              </Button>
               <Separator />
               <div className="space-y-1.5 text-sm">
                 <div className="flex">
